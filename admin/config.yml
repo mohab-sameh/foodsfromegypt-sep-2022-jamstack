@@ -1,0 +1,1608 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+media_folder: theme/assets/images
+public_folder: /assets/images
+collections:
+  - name: pages
+    label: Pages
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    folder: cms/pages
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '{{slug}}.html'
+      - &ref_0
+        label: Seo
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: string
+            required: false
+          - label: No index
+            name: noindex
+            widget: boolean
+            default: false
+            required: false
+          - label: Open Graph Title
+            name: og:title
+            widget: string
+            required: false
+          - label: Open Graph Image
+            name: og:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Twitter Title
+            name: twitter:title
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Card
+            name: twitter:card
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Site
+            name: twitter:site
+            widget: string
+            required: false
+          - label: Twitter Creator
+            name: twitter:creator
+            widget: string
+            required: false
+          - label: Additional HTML tags
+            name: additional_tags
+            widget: text
+            required: false
+  - name: categories
+    label: Categories
+    folder: cms/categories
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_exhibitors
+        label: Exhibitors
+        widget: relation
+        required: false
+        collection: exhibitors
+        value_field: cms/exhibitors/{{slug}}.md
+        search_fields:
+          - slug
+          - name
+        display_fields:
+          - title
+        multiple: true
+      - hint: ''
+        name: f_category-thumbnail
+        label: Category Thumbnail
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_number-of-exibitors-2
+        label: Number of Exibitors
+        widget: string
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: categories
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[categories].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: exhibitors
+    label: Exhibitors
+    folder: cms/exhibitors
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_logo
+        label: Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_address
+        label: Address
+        widget: string
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: exhibitors
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[exhibitors].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - label: Theme Settings
+    name: settings
+    identifier_field: title
+    extension: json
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    files:
+      - label: General
+        name: site
+        file: cms/_data/settings/site.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: General
+          - hint: Full domain url (needed for a correct sitemap file)
+            name: domain
+            label: Domain
+            widget: string
+            required: false
+          - name: favicon
+            label: Favicon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: apple_touch_icon
+            label: Apple Touch Icon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: header_additional_content
+            label: Additional Content Header
+            hint: Content here will be placed before </head> tag
+            widget: text
+            required: false
+          - name: footer_additional_content
+            label: Additional Content Footer
+            hint: Content here will be placed before </body> tag
+            widget: text
+            required: false
+          - name: images_optimization
+            label: Images Optimization
+            widget: object
+            collapsed: false
+            fields:
+              - label: Image Formats
+                name: formats
+                widget: select
+                multiple: true
+                options:
+                  - label: Avif
+                    value: avif
+                  - label: Webp
+                    value: webp
+              - label: Image Dimensions
+                name: dimensions
+                widget: select
+                multiple: true
+                options:
+                  - label: '500'
+                    value: 500
+                  - label: '800'
+                    value: 800
+                  - label: '1080'
+                    value: 1080
+                  - label: '1600'
+                    value: 1600
+                  - label: '2000'
+                    value: 2000
+                  - label: '2600'
+                    value: 2600
+      - label: Colors
+        name: colors
+        file: cms/_data/colors.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Colors
+      - label: Texts
+        name: texts
+        file: cms/_data/texts.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Texts
+          - hint: 'Original text: Home, key: 2268ff'
+            label: Text
+            name: 2268ff
+            widget: string
+          - hint: 'Original text: Exhibitors, key: -14fef729'
+            label: Text
+            name: '-14fef729'
+            widget: string
+          - hint: 'Original text: Sial - Paris 2022, key: 879ed05'
+            label: Text
+            name: 879ed05
+            widget: string
+          - hint: 'Original text: The , key: 27c1ef'
+            label: Text
+            name: 27c1ef
+            widget: string
+          - hint: 'Original text: Egyptian , key: -777064bb'
+            label: Text
+            name: '-777064bb'
+            widget: string
+          - hint: 'Original text: participation in, key: 3e956464'
+            label: Text
+            name: '3e956464'
+            widget: string
+          - hint: 'Original text: Sial, Paris 2022, key: 6065d2a8'
+            label: Text
+            name: 6065d2a8
+            widget: string
+          - hint: 'Original text: An Egyptian, key: 6b5bcaae'
+            label: Text
+            name: 6b5bcaae
+            widget: string
+          - hint: 'Original text: Tasty Gift to, key: 36a954b6'
+            label: Text
+            name: 36a954b6
+            widget: string
+          - hint: 'Original text: the World, key: 7ceb2703'
+            label: Text
+            name: 7ceb2703
+            widget: string
+          - hint: 'Original text: Oct. 15 - 19, key: -3da9f37b'
+            label: Text
+            name: '-3da9f37b'
+            widget: string
+          - hint: 'Original text: Sial Paris, FR., key: 419760c2'
+            label: Text
+            name: 419760c2
+            widget: string
+          - hint: >-
+              Original text: An ambitious mission to create a new world full of,
+              key: 6ba00b7a
+            label: Text
+            name: 6ba00b7a
+            widget: string
+          - hint: >-
+              Original text: Egyptian joy is a step closer to realization!, key:
+              5b3b926a
+            label: Text
+            name: 5b3b926a
+            widget: string
+          - hint: 'Original text: See Who’s gonna be there!, key: -3a32b6a2'
+            label: Text
+            name: '-3a32b6a2'
+            widget: string
+          - hint: 'Original text: See All Exhibitors, key: -7895339d'
+            label: Text
+            name: '-7895339d'
+            widget: string
+          - hint: >-
+              Original text: Sharing Experiences & Love Over Food!, key:
+              -60708210
+            label: Text
+            name: '-60708210'
+            widget: string
+          - hint: 'Original text: All Egyptians Support Our Mission, key: 57ecfea0'
+            label: Text
+            name: 57ecfea0
+            widget: string
+          - hint: >-
+              Original text: That's the mission to make a sensation of Egyptian
+              foods!, key: 25032526
+            label: Text
+            name: '25032526'
+            widget: string
+          - hint: >-
+              Original text: Learn how the Egyptian Food Export Council (FEC) is
+              changing the misconceptions around Egyptian foods., key: -19ad9dc3
+            label: Text
+            name: '-19ad9dc3'
+            widget: text
+          - hint: 'Original text: Visit the FEC Website, key: -72a6d265'
+            label: Text
+            name: '-72a6d265'
+            widget: string
+          - hint: 'Original text: About the Egyptian, key: -2d6aaf23'
+            label: Text
+            name: '-2d6aaf23'
+            widget: string
+          - hint: 'Original text: Presence in Sial, key: 299bf537'
+            label: Text
+            name: 299bf537
+            widget: string
+          - hint: 'Original text: 74, key: 6dd'
+            label: Text
+            name: 6dd
+            widget: string
+          - hint: 'Original text: Different, key: -3ae88fe7'
+            label: Text
+            name: '-3ae88fe7'
+            widget: string
+          - hint: 'Original text: 15, key: 624'
+            label: Text
+            name: '624'
+            widget: string
+          - hint: 'Original text: Sectors, key: -2757d253'
+            label: Text
+            name: '-2757d253'
+            widget: string
+          - hint: 'Original text: 500+, key: 18d1d6'
+            label: Text
+            name: 18d1d6
+            widget: string
+          - hint: 'Original text: Products, key: -37f9ca7c'
+            label: Text
+            name: '-37f9ca7c'
+            widget: string
+          - hint: >-
+              Original text: Egypt is going to show its best food products in
+              Paris for everyone to see, taste, connect, and enjoy., key:
+              -6078b6e8
+            label: Text
+            name: '-6078b6e8'
+            widget: text
+          - hint: >-
+              Original text: Egypt is very proud of its products and producers.
+              When it comes to food, Egypt is an enthusiast. We aim to grow
+              Egyptian foods to become an international sensation. Although not
+              an easy task, it won’t be our first time. Since the dawn of time
+              and our crops have been exported everywhere, from Rome to the
+              Arabian peninsula., key: -4a3ba7e2
+            label: Text
+            name: '-4a3ba7e2'
+            widget: text
+          - hint: >-
+              Original text: We Are Better at a Lot of Things, but There Are
+              Things We’re the Best At!, key: 554cdc1e
+            label: Text
+            name: 554cdc1e
+            widget: string
+          - hint: 'Original text: We Have Grown a Lot!, key: 1d3e937a'
+            label: Text
+            name: 1d3e937a
+            widget: string
+          - hint: >-
+              Original text: Over the past few years, Egypt has worked
+              tirelessly to grow its food produce to reach an internationally
+              renowned level. Since then, Egyptian processed food exports have
+              grown tremendously, reaching , key: 194b37aa
+            label: Text
+            name: 194b37aa
+            widget: text
+          - hint: 'Original text: $4.2 Billion USD, key: -7a5ba485'
+            label: Text
+            name: '-7a5ba485'
+            widget: string
+          - hint: 'Original text:  in 2021., key: 1848fc36'
+            label: Text
+            name: 1848fc36
+            widget: string
+          - hint: 'Original text: And There is Still to Come!, key: fa4aea1'
+            label: Text
+            name: fa4aea1
+            widget: string
+          - hint: >-
+              Original text: In addition to aiming to generally grow food
+              product exports, Egypt aimed to grow its exports to the EU
+              specifically. Egypt’s processed food exports to the EU achieved a
+              , key: -662baf38
+            label: Text
+            name: '-662baf38'
+            widget: text
+          - hint: 'Original text: 20% increase, key: 486d889b'
+            label: Text
+            name: 486d889b
+            widget: string
+          - hint: 'Original text:  in 2021 versus 2020., key: 4f7f5c08'
+            label: Text
+            name: 4f7f5c08
+            widget: string
+          - hint: >-
+              Original text: For Egypt to do all of this, every Egyptian in the
+              food & beverage sector had to work day and night, with enormous
+              focus. We have improved our quality, and our safety measures, and
+              forever will be trying to do our absolute best to stay true to our
+              mission; , key: 676997e7
+            label: Text
+            name: '676997e7'
+            widget: text
+          - hint: >-
+              Original text: making Egyptian food exports an international
+              sensation., key: 3d319c02
+            label: Text
+            name: 3d319c02
+            widget: string
+          - hint: 'Original text: Exquisite, key: -30bc60a7'
+            label: Text
+            name: '-30bc60a7'
+            widget: string
+          - hint: 'Original text: Strawberries, key: 297fee4d'
+            label: Text
+            name: 297fee4d
+            widget: string
+          - hint: >-
+              Original text: Value of exports exceeding $7 million USD in 2021
+              with a growth of 13% over 2020., key: -3357a30a
+            label: Text
+            name: '-3357a30a'
+            widget: string
+          - hint: 'Original text: Oleaginous, key: -53a59f66'
+            label: Text
+            name: '-53a59f66'
+            widget: string
+          - hint: 'Original text: Beauty, key: 765cfc9c'
+            label: Text
+            name: 765cfc9c
+            widget: string
+          - hint: >-
+              Original text: Value of exports exceeding $7 million USD in 2021
+              with a growth of 15% over 2020., key: -56519608
+            label: Text
+            name: '-56519608'
+            widget: string
+          - hint: 'Original text: Heavenly, key: -3da182f8'
+            label: Text
+            name: '-3da182f8'
+            widget: string
+          - hint: 'Original text: Oils, key: 258101'
+            label: Text
+            name: '258101'
+            widget: string
+          - hint: >-
+              Original text: Value of exports exceeding $14 million USD in 2021
+              with a growth of 29% over 2020., key: 3e76ab55
+            label: Text
+            name: 3e76ab55
+            widget: string
+          - hint: 'Original text: All About Us, key: -3f8103f0'
+            label: Text
+            name: '-3f8103f0'
+            widget: string
+          - hint: >-
+              Original text: The Food Export Council – FEC aims to link both
+              production and exports' policies, as well as promote Egyptian
+              exports and highlight Egyptian food products as reputable products
+              in international markets., key: 5d50900b
+            label: Text
+            name: 5d50900b
+            widget: text
+          - hint: >-
+              Original text: The Food Export Council - FEC is the link between
+              private sector exporters and the government. The council's
+              objective is to improve the competitive advantage of the sector
+              and strengthen the industry’s positive image in the world
+              marketplace. FEC members are the leading exporting companies in
+              the field, covering 27 of the food industry sub-sectors., key:
+              -7441b7b
+            label: Text
+            name: '-7441b7b'
+            widget: text
+          - hint: 'Original text: Select Country, key: -6e5b2f8e'
+            label: Text
+            name: '-6e5b2f8e'
+            widget: string
+          - hint: 'Original text: First Choice, key: -491b32af'
+            label: Text
+            name: '-491b32af'
+            widget: string
+          - hint: 'Original text: Second Choice, key: 3c4172cd'
+            label: Text
+            name: 3c4172cd
+            widget: string
+          - hint: 'Original text: Third Choice, key: -1b351146'
+            label: Text
+            name: '-1b351146'
+            widget: string
+          - hint: 'Original text: Fields marked with (*) are required., key: 1b84ab3d'
+            label: Text
+            name: 1b84ab3d
+            widget: string
+          - hint: >-
+              Original text: Thank you! Your submission has been received!, key:
+              5a0ea5a1
+            label: Text
+            name: 5a0ea5a1
+            widget: string
+          - hint: >-
+              Original text: Oops! Something went wrong while submitting the
+              form., key: -7c112e99
+            label: Text
+            name: '-7c112e99'
+            widget: string
+          - hint: 'Original text: The World, key: -ba2b91d'
+            label: Text
+            name: '-ba2b91d'
+            widget: string
+          - hint: 'Original text: Business partners and exporters, key: 71477b4'
+            label: Text
+            name: 71477b4
+            widget: string
+          - hint: 'Original text: ., key: 2e'
+            label: Text
+            name: 2e
+            widget: string
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
+          - hint: "Original text: Badawy \_Group for Food Industries, key: -6fa5a4d8"
+            label: Text
+            name: '-6fa5a4d8'
+            widget: string
+          - hint: "Original text: Al \_Mansour For Trading & Distribution Co., key: -51b1a4f2"
+            label: Text
+            name: '-51b1a4f2'
+            widget: string
+          - hint: 'Original text: Sunshine, key: -628add41'
+            label: Text
+            name: '-628add41'
+            widget: string
+          - hint: "Original text: Misr \_International Coffee, key: -7cae1ac7"
+            label: Text
+            name: '-7cae1ac7'
+            widget: string
+          - hint: "Original text: Coffee, \_Tea, and Herbal Teas, key: -71c8c3c2"
+            label: Text
+            name: '-71c8c3c2'
+            widget: string
+          - hint: 'Original text: A total of 7 different exhibitors, key: cc5f1f5'
+            label: Text
+            name: cc5f1f5
+            widget: string
+          - hint: "Original text: Egyptian \_Turkish company for confectionery industry Elvan, key: 28243af5"
+            label: Text
+            name: 28243af5
+            widget: string
+          - hint: "Original text: SOCHEMA \_FOODS - Sofi Farms, key: -4972fa2e"
+            label: Text
+            name: '-4972fa2e'
+            widget: string
+          - hint: "Original text: Kemet \_For Natural Food, key: 512a66e"
+            label: Text
+            name: 512a66e
+            widget: string
+          - hint: "Original text: Faragalla \_Group - The Egyptian Co. For Freezing & Beef Processing, key: -9ce529d"
+            label: Text
+            name: '-9ce529d'
+            widget: string
+          - hint: "Original text: Halwani \_Bros, key: 206f9fcc"
+            label: Text
+            name: 206f9fcc
+            widget: string
+          - hint: "Original text: Edita \_Food Industries, key: 605eb0e7"
+            label: Text
+            name: 605eb0e7
+            widget: string
+          - hint: "Original text: Birds \_Cage - BCF, key: -464e8558"
+            label: Text
+            name: '-464e8558'
+            widget: string
+          - hint: 'Original text: Harvest, key: -733b9cb7'
+            label: Text
+            name: '-733b9cb7'
+            widget: string
+          - hint: 'Original text: Confectionery, key: 6ebcdcb6'
+            label: Text
+            name: 6ebcdcb6
+            widget: string
+          - hint: 'Original text: A total of 3 different exhibitors, key: -d50f887'
+            label: Text
+            name: '-d50f887'
+            widget: string
+          - hint: "Original text: Al Sakr \_for food industries, key: -52d18ea3"
+            label: Text
+            name: '-52d18ea3'
+            widget: string
+          - hint: 'Original text: AL Sabah, key: 4fe042a6'
+            label: Text
+            name: 4fe042a6
+            widget: string
+          - hint: "Original text: Arab \_French Company, key: 663520a9"
+            label: Text
+            name: 663520a9
+            widget: string
+          - hint: 'Original text: Dairy, key: 3ebeeb3'
+            label: Text
+            name: 3ebeeb3
+            widget: string
+          - hint: 'Original text: 1 Exhibitor, key: -18c14a13'
+            label: Text
+            name: '-18c14a13'
+            widget: string
+          - hint: "Original text: Orient \_Group for Food Industries, key: 42dd8f61"
+            label: Text
+            name: 42dd8f61
+            widget: string
+          - hint: "Original text: El Waha \_Co. for Dates, key: 7dda05b4"
+            label: Text
+            name: 7dda05b4
+            widget: string
+          - hint: "Original text: Afro \_Group, key: -19a2d5a3"
+            label: Text
+            name: '-19a2d5a3'
+            widget: string
+          - hint: 'Original text: Dates, key: 3ec1665'
+            label: Text
+            name: 3ec1665
+            widget: string
+          - hint: 'Original text: A total of 14 different exhibitors, key: 455727ed'
+            label: Text
+            name: 455727ed
+            widget: string
+          - hint: "Original text: Green \_Meadows for Food Industries, key: 7e8f17d4"
+            label: Text
+            name: 7e8f17d4
+            widget: string
+          - hint: "Original text: Upper \_Egypt, key: 53d28f9"
+            label: Text
+            name: 53d28f9
+            widget: string
+          - hint: "Original text: Dressing \_and Sauces, key: 288f9ffe"
+            label: Text
+            name: 288f9ffe
+            widget: string
+          - hint: 'Original text: L.S.E, key: 44520c8'
+            label: Text
+            name: 44520c8
+            widget: string
+          - hint: "Original text: Gulf \_Canning Company (GCC), key: -5d8bc67d"
+            label: Text
+            name: '-5d8bc67d'
+            widget: string
+          - hint: "Original text: Al-Monairy \_Group, key: -784d3e1a"
+            label: Text
+            name: '-784d3e1a'
+            widget: string
+          - hint: "Original text: Egyptian \_International Company (Great Foods), key: -65786a41"
+            label: Text
+            name: '-65786a41'
+            widget: string
+          - hint: "Original text: Alex \_Complex, key: 2007df92"
+            label: Text
+            name: 2007df92
+            widget: string
+          - hint: "Original text: GREEN \_FIELDS ALEX FOR FOOD INDUSTRIES (Green Valley), key: 2f7e601c"
+            label: Text
+            name: 2f7e601c
+            widget: string
+          - hint: "Original text: Tagfeef \_Food Processing, key: -a693545"
+            label: Text
+            name: '-a693545'
+            widget: string
+          - hint: "Original text: Linah \_Farms, key: 65585905"
+            label: Text
+            name: '65585905'
+            widget: string
+          - hint: "Original text: Paste \_& Juice, key: -334840cd"
+            label: Text
+            name: '-334840cd'
+            widget: string
+          - hint: "Original text: Atlantis \_International, key: -33b59f8a"
+            label: Text
+            name: '-33b59f8a'
+            widget: string
+          - hint: "Original text: Natura \_Agro-Trade, key: -185b1b43"
+            label: Text
+            name: '-185b1b43'
+            widget: string
+          - hint: "Original text: Dream \_Valley Foods for food industrial, key: -68462485"
+            label: Text
+            name: '-68462485'
+            widget: string
+          - hint: "Original text: Allord \_Manufacturing, key: 51af76de"
+            label: Text
+            name: 51af76de
+            widget: string
+          - hint: 'Original text: Company Description, key: -20d0f767'
+            label: Text
+            name: '-20d0f767'
+            widget: string
+          - hint: "Original text: Dried \_and Canned Foods, key: -679e9d4b"
+            label: Text
+            name: '-679e9d4b'
+            widget: string
+          - hint: "Original text: El \_Misria For Food Investment, key: 7e8316f8"
+            label: Text
+            name: 7e8316f8
+            widget: string
+          - hint: "Original text: El \_Koubasay for Juice, key: -6bda5475"
+            label: Text
+            name: '-6bda5475'
+            widget: string
+          - hint: "Original text: Orion \_Food Ind., key: 79094dec"
+            label: Text
+            name: 79094dec
+            widget: string
+          - hint: "Original text: Green \_Hope for Agriculture Development Ltd \_ \"Green Hope Ltd \", key: -28354277"
+            label: Text
+            name: '-28354277'
+            widget: string
+          - hint: "Original text: Solymar \_Food for Imp & Exp & Foodstuff Trade, key: -27292575"
+            label: Text
+            name: '-27292575'
+            widget: string
+          - hint: "Original text: Elfath \_for Import and Export agriculture crops, key: -7d2d10c1"
+            label: Text
+            name: '-7d2d10c1'
+            widget: string
+          - hint: "Original text: El \_Hussein for Agricultural Crops and Import & Export, key: -1fab7dd"
+            label: Text
+            name: '-1fab7dd'
+            widget: string
+          - hint: "Original text: Ajwa for \_Food Industries Co. (OROUBA – BASMA)Hall, key: -5e8e5ecd"
+            label: Text
+            name: '-5e8e5ecd'
+            widget: string
+          - hint: "Original text: Vegi \_Farm for food industries, key: -77b316f2"
+            label: Text
+            name: '-77b316f2'
+            widget: string
+          - hint: "Original text: Cold \_Alex for Food Processing, key: -76ff87a0"
+            label: Text
+            name: '-76ff87a0'
+            widget: string
+          - hint: "Original text: The \_United for food industries (Montana), key: f7a57c0"
+            label: Text
+            name: f7a57c0
+            widget: string
+          - hint: "Original text: Silva \_for food industry, key: 22242448"
+            label: Text
+            name: '22242448'
+            widget: string
+          - hint: "Original text: International \_Food & Consumable Goods Egypt S.A.E. - IFCG, key: a1a1645"
+            label: Text
+            name: a1a1645
+            widget: string
+          - hint: 'Original text: ICAPP, key: 42426a7'
+            label: Text
+            name: 42426a7
+            widget: string
+          - hint: "Original text: British \_Egyptian Co. For General Development (Galina), key: -795d41b5"
+            label: Text
+            name: '-795d41b5'
+            widget: string
+          - hint: "Original text: MIMA \_Food, key: -51aa82d2"
+            label: Text
+            name: '-51aa82d2'
+            widget: string
+          - hint: "Original text: Upper \_Egypt for food industries, key: -5bf41300"
+            label: Text
+            name: '-5bf41300'
+            widget: string
+          - hint: "Original text: Deluxe \_for Investments, key: 341a7912"
+            label: Text
+            name: 341a7912
+            widget: string
+          - hint: "Original text: FROSTY \_FOODS FOR EXPORT, key: 3fc70bcb"
+            label: Text
+            name: 3fc70bcb
+            widget: string
+          - hint: "Original text: Naggar \_Trading & Consultancy - TAMARA Foods, key: -4385adba"
+            label: Text
+            name: '-4385adba'
+            widget: string
+          - hint: "Original text: EGCT \_Frozen, key: 7df4d0d3"
+            label: Text
+            name: 7df4d0d3
+            widget: string
+          - hint: "Original text: Elmarwa \_for preserving vegetables and fruits, key: -4713c6a9"
+            label: Text
+            name: '-4713c6a9'
+            widget: string
+          - hint: "Original text: Egyptian \_Saudi Food Industries Co., key: -3070932f"
+            label: Text
+            name: '-3070932f'
+            widget: string
+          - hint: "Original text: ALFAFROST \_S.A.E, key: 4e1e0f3f"
+            label: Text
+            name: 4e1e0f3f
+            widget: string
+          - hint: "Original text: GIVREX \_(Robert Mansour & Co.), key: 7d910275"
+            label: Text
+            name: 7d910275
+            widget: string
+          - hint: "Original text: GREEN \_FIELDS ALEX FOR FOOD INDUSTRIES(green valley, key: -5b215025"
+            label: Text
+            name: '-5b215025'
+            widget: string
+          - hint: "Original text: Bostana \_Food Industries, key: 6ad0dcb8"
+            label: Text
+            name: 6ad0dcb8
+            widget: string
+          - hint: "Original text: Frozen \_Fruits and Vegetables, key: 168f5e7c"
+            label: Text
+            name: 168f5e7c
+            widget: string
+          - hint: "Original text: El \_Rashidy AL Mizan, key: 77a64643"
+            label: Text
+            name: 77a64643
+            widget: string
+          - hint: "Original text: Awael \_Food, key: 16a60030"
+            label: Text
+            name: 16a60030
+            widget: string
+          - hint: 'Original text: Halva, Tahini, Honey & Jam, key: 631d3c48'
+            label: Text
+            name: 631d3c48
+            widget: string
+          - hint: "Original text: Special \_Foods Industry International, key: -11ce5410"
+            label: Text
+            name: '-11ce5410'
+            widget: string
+          - hint: "Original text: Special \_Foods Co, key: -7fc3f550"
+            label: Text
+            name: '-7fc3f550'
+            widget: string
+          - hint: "Original text: Herbs \_and Spices, key: 5ce60734"
+            label: Text
+            name: 5ce60734
+            widget: string
+          - hint: 'Original text: Juice, key: 4499140'
+            label: Text
+            name: '4499140'
+            widget: string
+          - hint: 'Original text: A total of 2 different exhibitors, key: 6c294cda'
+            label: Text
+            name: 6c294cda
+            widget: string
+          - hint: 'Original text: Hall 2.1 - Stand C-040, key: -e45d9ad'
+            label: Text
+            name: '-e45d9ad'
+            widget: string
+          - hint: 'Original text: Hall 2.1 - Stand C-042, key: -e45d9ab'
+            label: Text
+            name: '-e45d9ab'
+            widget: string
+          - hint: 'Original text: Olives, Edible & Essential Oils, key: -67059670'
+            label: Text
+            name: '-67059670'
+            widget: string
+          - hint: 'Original text: Hall 10.2 - Stand D-011/D019, key: 31c7cdef'
+            label: Text
+            name: 31c7cdef
+            widget: string
+          - hint: "Original text: Pasta \_and Wheat Derivatives, key: 7d2769fb"
+            label: Text
+            name: 7d2769fb
+            widget: string
+          - hint: 'Original text: Pickles, key: 40c4ba39'
+            label: Text
+            name: 40c4ba39
+            widget: string
+          - hint: "Original text: Pulses \_and Grains, key: e690b7b"
+            label: Text
+            name: e690b7b
+            widget: string
+          - hint: "Original text: Tomato \_Paste, key: 7a418a89"
+            label: Text
+            name: 7a418a89
+            widget: string
+      - label: Links
+        name: links
+        file: cms/_data/links.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Links
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+          - hint: 'Original link: /, key: 2f'
+            label: Link
+            name: 2f
+            widget: string
+          - hint: 'Original link: /exhibitors, key: -35d401da'
+            label: Link
+            name: '-35d401da'
+            widget: string
+          - hint: 'Original link: http://www.feceg.com/, key: 376007df'
+            label: Link
+            name: 376007df
+            widget: string
+      - label: Images
+        name: images
+        file: cms/_data/images.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Images
+          - label: Image
+            name: 5c2f0f5c
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i1bf3ee2b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6540a294
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 654eba15
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i1d9aaf49
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i1c0205ac
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i1d7e8047
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i1d625145
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i1dc4f5cc
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i1db6de4b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 655cd196
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i1d7068c6
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 65328b13
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-17828865'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-1e6dbce1'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 553e5c9d
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 51315d12
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 4a192da0
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 4a274521
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3ff258a6
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3fb9faa2
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3fabe321
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 2a6b69f3
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 279f0029
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-1781b3e6'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 241ffa94
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3b58285e
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-bb8f837'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 4099cd24
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3cc348cc
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-5b44dcd2'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-27a39d10'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 19f3e24
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 2231131e
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-1207042f'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7741c8b9'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-60656145'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7236a652'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3d10653e
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-21bca3f6'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 2dd23785
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: f228e7d
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 18caada3
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-ce59b3f'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-708f6d93'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-617f9d00'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+publish_mode: editorial_workflow
