@@ -1,0 +1,13 @@
+---
+title: Solymar Food for Imp & Exp & Foodstuff Trade
+created-on: 2022-10-04T23:09:22.678Z
+updated-on: 2022-10-04T23:09:22.700Z
+published-on: 2022-10-04T23:09:22.715Z
+tags: exhibitors
+layout: "[exhibitors].html"
+date: 2022-10-04T23:09:22.732Z
+seo:
+  noindex: false
+  twitter:title: summary
+  twitter:card: summary
+---
