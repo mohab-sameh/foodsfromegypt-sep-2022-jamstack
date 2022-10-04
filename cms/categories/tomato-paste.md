@@ -1,17 +1,15 @@
 ---
-title: Tomato Paste
+created-on: 2022-10-04T22:01:50.354Z
+layout: "[categories].html"
 slug: tomato-paste
-updated-on: '2022-10-04T22:47:33.454Z'
-created-on: '2022-10-04T22:01:50.354Z'
-published-on: '2022-10-04T22:22:04.215Z'
-f_category-thumbnail:
-  url: >-
-    https://uploads-ssl.webflow.com/633ca6e9d0684ba0b41ae7fe/633cae74ad39c9576e607b15_633ca6b8d7d4f50b68fff058_asoggetti-qJjXwi2zNSE-unsplash%201(14).png
-  alt: null
+title: Tomato Paste
+updated-on: 2022-10-04T22:47:33.454Z
+published-on: 2022-10-04T22:22:04.215Z
 f_exhibitors: []
+f_category-thumbnail:
+  url: /assets/images/anshu-a-mvus_adtix8-unsplash.jpg
+  alt: null
 f_number-of-exibitors-2: A total of X exhibitors
-layout: '[categories].html'
 tags: categories
+date: 2022-10-04T23:12:37.781Z
 ---
-
-
