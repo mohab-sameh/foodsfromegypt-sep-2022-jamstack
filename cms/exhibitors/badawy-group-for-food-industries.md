@@ -1,9 +1,10 @@
 ---
-title: 'Badawy Group for Food Industries '
+f_address: null
+title: Badawy Group for Food Industries
 slug: badawy-group-for-food-industries
-updated-on: '2022-10-04T21:35:44.522Z'
-created-on: '2022-10-04T21:35:44.522Z'
-published-on: '2022-10-04T21:42:10.713Z'
+updated-on: '2022-10-04T22:48:49.078Z'
+created-on: '2022-10-04T22:48:49.078Z'
+published-on: null
 layout: '[exhibitors].html'
 tags: exhibitors
 ---

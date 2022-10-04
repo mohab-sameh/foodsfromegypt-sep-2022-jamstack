@@ -983,10 +983,6 @@ collections:
             name: title
             widget: hidden
             default: Links
-          - hint: 'Original link: #, key: 23'
-            label: Link
-            name: '23'
-            widget: string
           - hint: 'Original link: /, key: 2f'
             label: Link
             name: 2f
@@ -994,6 +990,10 @@ collections:
           - hint: 'Original link: /exhibitors, key: -35d401da'
             label: Link
             name: '-35d401da'
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
             widget: string
           - hint: 'Original link: http://www.feceg.com/, key: 376007df'
             label: Link
