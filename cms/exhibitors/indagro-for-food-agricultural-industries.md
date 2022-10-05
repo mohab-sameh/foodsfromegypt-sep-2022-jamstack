@@ -1,0 +1,13 @@
+---
+title: Indagro for Food & Agricultural Industries
+created-on: 2022-10-04T23:05:01.570Z
+updated-on: 2022-10-04T23:05:01.584Z
+published-on: 2022-10-04T23:05:01.596Z
+tags: exhibitors
+layout: "[exhibitors].html"
+date: 2022-10-04T23:05:01.614Z
+seo:
+  noindex: false
+  twitter:title: summary
+  twitter:card: summary
+---
