@@ -16,6 +16,7 @@ f_exhibitors:
   - cms/exhibitors/egyiptian-emirates.md
   - cms/exhibitors/sunshine.md
   - cms/exhibitors/wadi-el-nile-for-food-industries.md
+  - cms/exhibitors/united-for-food-industries-bianco.md
 f_category-thumbnail:
   url: /assets/images/pexels-pixabay-35661.jpg
 f_number-of-exibitors-2: null
