@@ -3,6 +3,8 @@ title: GIVREX (Robert Mansour & Co.)
 created-on: 2022-10-04T23:00:57.459Z
 updated-on: 2022-10-04T23:00:57.473Z
 published-on: 2022-10-04T23:00:57.486Z
+f_logo:
+  url: /assets/images/givrex-logo_page_1.jpg
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:00:57.496Z
