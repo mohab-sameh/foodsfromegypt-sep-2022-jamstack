@@ -1631,7 +1631,7 @@ h2 {
   }
 
   .grid-5 {
-    max-height: 600px;
+    max-height: 400px;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
