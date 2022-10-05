@@ -6,7 +6,7 @@ slug: ''
 tags: pages
 seo:
   noindex: false
-  title: Copy of FoodsFromEgypt - September 2022
+  title: FoodsFromEgypt - September 2022
 ---
 
 
