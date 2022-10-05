@@ -3,6 +3,8 @@ title: Kemet For Natural Food
 created-on: 2022-10-04T23:05:39.277Z
 updated-on: 2022-10-04T23:05:39.291Z
 published-on: 2022-10-04T23:05:39.306Z
+f_logo:
+  url: /assets/images/kemet-for-natural-food.jpg
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:05:39.316Z
