@@ -3,6 +3,8 @@ title: Fruit Land for Food Industries
 created-on: 2022-10-04T23:00:48.326Z
 updated-on: 2022-10-04T23:00:48.354Z
 published-on: 2022-10-04T23:00:48.367Z
+f_logo:
+  url: /assets/images/fruit-land-for-food-industries.jpg
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:00:48.383Z
