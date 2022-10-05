@@ -1,12 +1,13 @@
 ---
-f_number-of-exibitors-2: null
-title: Coffee, Tea, and Herbal Teas
+created-on: 2022-10-04T22:01:49.203Z
+layout: "[categories].html"
 slug: coffee-tea-and-herbal-teas
-updated-on: '2022-10-04T22:01:49.203Z'
-created-on: '2022-10-04T22:01:49.203Z'
-published-on: '2022-10-04T22:22:04.215Z'
-layout: '[categories].html'
+title: Coffee, Tea, and Herbal Teas
+updated-on: 2022-10-04T22:01:49.203Z
+published-on: 2022-10-04T22:22:04.215Z
+f_category-thumbnail:
+  url: /assets/images/nathan-dumlao-y3aqmbmtlqi-unsplash.jpg
+f_number-of-exibitors-2: null
 tags: categories
+date: 2022-10-04T23:01:17.964Z
 ---
-
-
