@@ -1,12 +1,11 @@
 ---
-f_address: null
-title: Ajwa for Food Industries Co. (OROUBA � BASMA)
+created-on: 2022-10-04T22:48:48.196Z
+layout: "[exhibitors].html"
 slug: ajwa-for-food-industries-co-orouba-basma
-updated-on: '2022-10-04T22:48:48.196Z'
-created-on: '2022-10-04T22:48:48.196Z'
+title: Ajwa for Food Industries Co. (OROUBA - BASMA)
+updated-on: 2022-10-04T22:48:48.196Z
 published-on: null
-layout: '[exhibitors].html'
+f_address: null
 tags: exhibitors
+date: 2022-10-05T09:43:36.001Z
 ---
-
-
