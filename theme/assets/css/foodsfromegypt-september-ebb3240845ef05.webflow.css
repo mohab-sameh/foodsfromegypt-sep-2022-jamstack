@@ -960,7 +960,7 @@ h2 {
   justify-content: center;
 }
 
-.img.div-block-42 {
+.img .div-block-42 {
   max-height: 100px;
   object-fit: contain;
 }
