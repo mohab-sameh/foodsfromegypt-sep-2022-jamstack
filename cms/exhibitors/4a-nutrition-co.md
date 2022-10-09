@@ -4,7 +4,7 @@ f_logo:
   url: /assets/images/4a-nutrition-co-.jpg
 layout: "[exhibitors].html"
 slug: 4a-nutrition-co
-title: H500 - info@marwansameh.com
+title: 4A Nutrition Co
 updated-on: 2022-10-04T22:48:47.936Z
 published-on: null
 f_address: null
