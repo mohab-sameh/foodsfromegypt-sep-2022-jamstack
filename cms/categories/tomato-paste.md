@@ -22,7 +22,7 @@ f_exhibitors:
 f_category-thumbnail:
   url: /assets/images/anshu-a-mvus_adtix8-unsplash.jpg
   alt: null
-f_number-of-exibitors-2: A total of X exhibitors
+f_number-of-exibitors-2: ""
 tags: categories
 date: 2022-10-04T23:12:37.781Z
 ---
