@@ -5,6 +5,8 @@ updated-on: 2022-10-04T23:08:05.152Z
 published-on: 2022-10-04T23:08:05.164Z
 f_logo:
   url: /assets/images/orion-logo.jpg
+f_address: Hall 1 - D172
+f_exhibitor-url: www.orionfood.com
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:08:05.177Z
