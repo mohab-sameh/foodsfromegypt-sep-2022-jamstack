@@ -947,7 +947,6 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   overflow: visible;
-  max-height: 150px;
   padding: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1462,6 +1461,10 @@ h2 {
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .collection-list-wrapper-2 {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1729,6 +1732,12 @@ h2 {
   .collection-list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .image-12 {
+    max-height: 100px;
+    -o-object-fit: contain;
+    object-fit: contain;
   }
 }
 

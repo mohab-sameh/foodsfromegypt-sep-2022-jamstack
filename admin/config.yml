@@ -204,6 +204,11 @@ collections:
         label: Address
         widget: string
         required: false
+      - hint: ''
+        name: f_exhibitor-url
+        label: Exhibitor URL
+        widget: string
+        required: false
       - label: Tags
         widget: hidden
         name: tags
