@@ -983,6 +983,10 @@ collections:
             name: title
             widget: hidden
             default: Links
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
           - hint: 'Original link: /, key: 2f'
             label: Link
             name: 2f
@@ -990,10 +994,6 @@ collections:
           - hint: 'Original link: /exhibitors, key: -35d401da'
             label: Link
             name: '-35d401da'
-            widget: string
-          - hint: 'Original link: #, key: 23'
-            label: Link
-            name: '23'
             widget: string
           - hint: 'Original link: http://www.feceg.com/, key: 376007df'
             label: Link
@@ -1321,6 +1321,19 @@ collections:
                 required: false
           - label: Image
             name: '-1781b3e6'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '0'
             widget: object
             fields:
               - name: url
