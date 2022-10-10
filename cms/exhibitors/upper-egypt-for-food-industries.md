@@ -5,6 +5,8 @@ updated-on: 2022-10-04T23:10:59.817Z
 published-on: 2022-10-04T23:10:59.836Z
 f_logo:
   url: /assets/images/upper-egypt-for-food-industries.jpg
+f_address: Hall 5A - T211
+f_exhibitor-url: www.ueffi.com
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:10:59.845Z
