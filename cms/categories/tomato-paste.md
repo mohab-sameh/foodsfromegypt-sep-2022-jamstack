@@ -19,6 +19,7 @@ f_exhibitors:
   - cms/exhibitors/paste-juice.md
   - cms/exhibitors/awael-food.md
   - cms/exhibitors/dream-valley-foods-for-food-industrial.md
+  - cms/exhibitors/upper-egypt-1.md
 f_category-thumbnail:
   url: /assets/images/anshu-a-mvus_adtix8-unsplash.jpg
   alt: null
