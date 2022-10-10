@@ -1,12 +1,14 @@
 ---
-f_address: null
-title: Afro Group
+created-on: 2022-10-04T22:48:47.659Z
+f_logo:
+  url: /assets/images/afro-group.jpg
+f_exhibitor-url: www.afro-group.com
+layout: "[exhibitors].html"
 slug: afro-group
-updated-on: '2022-10-04T22:48:47.659Z'
-created-on: '2022-10-04T22:48:47.659Z'
+title: Afro Group
+updated-on: 2022-10-04T22:48:47.659Z
 published-on: null
-layout: '[exhibitors].html'
+f_address: Hall 1 - B172
 tags: exhibitors
+date: 2022-10-10T22:31:14.490Z
 ---
-
-
