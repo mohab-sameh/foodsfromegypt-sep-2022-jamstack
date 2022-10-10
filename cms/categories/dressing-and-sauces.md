@@ -21,10 +21,10 @@ f_exhibitors:
   - cms/exhibitors/paste-juice.md
   - cms/exhibitors/atlantis-international.md
   - cms/exhibitors/natura-agro-trade.md
-  - cms/exhibitors/upper-egypt-for-food-industries.md
   - cms/exhibitors/dream-valley-foods-for-food-industrial.md
   - cms/exhibitors/harvest.md
   - cms/exhibitors/allord-manufacturing.md
+  - cms/exhibitors/upper-egypt-1.md
 f_category-thumbnail:
   url: /assets/images/muhammad-syafi-al-adam-qbzbygdgxgu-unsplash.jpg
 f_number-of-exibitors-2: null
