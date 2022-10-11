@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:49.423Z
 f_logo:
   url: /assets/images/cold-alex-for-food-processing.jpg
-f_exhibitor-url: www.coldalexegypt.com
+f_exhibitor-url: https://www.coldalexegypt.com
 layout: "[exhibitors].html"
 slug: cold-alex-for-food-processing
 title: Cold Alex for Food Processing

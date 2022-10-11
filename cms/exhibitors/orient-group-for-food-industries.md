@@ -6,7 +6,7 @@ published-on: 2022-10-04T23:07:53.415Z
 f_logo:
   url: /assets/images/orient-group-for-food-industries-.jpg
 f_address: Hall 3 - A197
-f_exhibitor-url: www.orienteg.com
+f_exhibitor-url: https://www.orienteg.com
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:07:53.426Z

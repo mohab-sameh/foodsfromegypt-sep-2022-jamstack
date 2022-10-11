@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:49.113Z
 f_logo:
   url: /assets/images/birds-cage-bcf.jpg
-f_exhibitor-url: www.Elawael-eg.com
+f_exhibitor-url: https://www.Elawael-eg.com
 layout: "[exhibitors].html"
 slug: birds-cage-bcf
 title: Birds Cage - BCF

@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:50.252Z
 f_logo:
   url: /assets/images/el-koubasay-for-juice.jpg
-f_exhibitor-url: www.elkoubasy.com
+f_exhibitor-url: https://www.elkoubasy.com
 layout: "[exhibitors].html"
 slug: el-koubasay-for-juice
 title: El Koubasay for Juice

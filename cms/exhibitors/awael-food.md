@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:49.058Z
 f_logo:
   url: /assets/images/awael-food.jpg
-f_exhibitor-url: www.bcfegypt.com
+f_exhibitor-url: https://www.bcfegypt.com
 layout: "[exhibitors].html"
 slug: awael-food
 title: Awael Food

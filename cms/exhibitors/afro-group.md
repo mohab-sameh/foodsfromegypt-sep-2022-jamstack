@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:47.659Z
 f_logo:
   url: /assets/images/afro-group.jpg
-f_exhibitor-url: www.afro-group.com
+f_exhibitor-url: https://www.afro-group.com
 layout: "[exhibitors].html"
 slug: afro-group
 title: Afro Group

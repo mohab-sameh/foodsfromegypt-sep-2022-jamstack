@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:48.560Z
 f_logo:
   url: /assets/images/alfafrost-logo-p-1080.jpeg
-f_exhibitor-url: www.alfafrost.com
+f_exhibitor-url: https://www.alfafrost.com
 layout: "[exhibitors].html"
 slug: alfafrost-s-a-e
 title: ALFAFROST S.A.E

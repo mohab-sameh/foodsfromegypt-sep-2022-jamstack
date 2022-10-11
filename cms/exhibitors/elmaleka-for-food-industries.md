@@ -6,7 +6,7 @@ published-on: 2022-10-04T23:00:01.378Z
 f_logo:
   url: /assets/images/el-maleka-logo-01.png
 f_address: Hall 3 - A200
-f_exhibitor-url: www.Savola.com
+f_exhibitor-url: https://www.Savola.com
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:00:01.391Z

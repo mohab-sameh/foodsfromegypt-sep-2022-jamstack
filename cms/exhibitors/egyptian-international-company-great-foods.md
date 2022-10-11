@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:49.876Z
 f_logo:
   url: /assets/images/egyptian-international-company-great-foods-.jpg
-f_exhibitor-url: www.greatfoods.com.eg
+f_exhibitor-url: https://www.greatfoods.com.eg
 layout: "[exhibitors].html"
 slug: egyptian-international-company-great-foods
 title: Egyptian International Company (Great Foods)

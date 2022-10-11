@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:49.938Z
 f_logo:
   url: /assets/images/egyptian-saudi-food-industries-co..jpg
-f_exhibitor-url: WWW.ESFIC-SA.COM
+f_exhibitor-url: https://www.ESFIC-SA.COM
 layout: "[exhibitors].html"
 slug: egyptian-saudi-food-industries-co
 title: Egyptian Saudi Food Industries Co.

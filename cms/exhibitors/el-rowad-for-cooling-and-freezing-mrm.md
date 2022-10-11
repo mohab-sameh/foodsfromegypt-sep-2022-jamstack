@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:50.514Z
 f_logo:
   url: /assets/images/el-rowad-for-cooling-and-freezing-mrm.jpg
-f_exhibitor-url: www.mrmgroup-eg.com
+f_exhibitor-url: https://www.mrmgroup-eg.com
 layout: "[exhibitors].html"
 slug: el-rowad-for-cooling-and-freezing-mrm
 title: El Rowad for Cooling and Freezing - MRM

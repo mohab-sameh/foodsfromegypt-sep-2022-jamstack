@@ -6,7 +6,7 @@ published-on: 2022-10-04T23:04:11.299Z
 f_logo:
   url: /assets/images/green-meadows-for-food-industries.jpg
 f_address: Hall 3 - B213
-f_exhibitor-url: www.dixie-mills.com
+f_exhibitor-url: https://www.dixie-mills.com
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:04:11.325Z

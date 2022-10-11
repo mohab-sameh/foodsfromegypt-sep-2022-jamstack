@@ -6,7 +6,7 @@ published-on: 2022-10-04T23:09:33.176Z
 f_logo:
   url: /assets/images/special-foods-industry-international.jpg
 f_address: Hall 1 - D172
-f_exhibitor-url: www.sfi-egypt.com
+f_exhibitor-url: https://www.sfi-egypt.com
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:09:33.186Z

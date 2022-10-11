@@ -6,7 +6,7 @@ published-on: 2022-10-04T23:06:55.338Z
 f_logo:
   url: /assets/images/naggar-trading-consultancy-tamara-foods.jpg
 f_address: Hall 5A - S220
-f_exhibitor-url: www.tamarafoods.com
+f_exhibitor-url: https://www.tamarafoods.com
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:06:55.351Z

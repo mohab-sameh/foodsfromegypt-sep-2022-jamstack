@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:49.801Z
 f_logo:
   url: /assets/images/egyiptian-emirates.jpg
-f_exhibitor-url: www.egaeif.com
+f_exhibitor-url: https://www.egaeif.com
 layout: "[exhibitors].html"
 slug: egyiptian-emirates
 title: Egyiptian Emirates

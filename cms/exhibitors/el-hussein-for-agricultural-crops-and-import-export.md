@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:50.242Z
 f_logo:
   url: /assets/images/el-hussein-for-agricultural-crops-and-import-export-.jpg
-f_exhibitor-url: www.Elhusseincrops.com
+f_exhibitor-url: https://www.Elhusseincrops.com
 layout: "[exhibitors].html"
 slug: el-hussein-for-agricultural-crops-and-import-export
 title: El Hussein for Agricultural Crops and Import & Export

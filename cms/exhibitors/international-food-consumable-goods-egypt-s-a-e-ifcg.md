@@ -6,7 +6,7 @@ published-on: 2022-10-04T23:05:27.767Z
 f_logo:
   url: /assets/images/international-food-consumable-goods-egypt-s.a.e.-ifcg-.png
 f_address: Hall 5A - T203
-f_exhibitor-url: www.ifcgegypt.com
+f_exhibitor-url: https://www.ifcgegypt.com
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:05:27.784Z

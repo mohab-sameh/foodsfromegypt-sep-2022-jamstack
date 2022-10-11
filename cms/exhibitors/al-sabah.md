@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:48.145Z
 f_logo:
   url: /assets/images/al-sabah.jpg
-f_exhibitor-url: www.elsabah.net
+f_exhibitor-url: https://www.elsabah.net
 layout: "[exhibitors].html"
 slug: al-sabah
 title: AL Sabah

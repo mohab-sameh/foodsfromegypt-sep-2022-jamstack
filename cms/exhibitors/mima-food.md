@@ -6,7 +6,7 @@ published-on: 2022-10-04T23:06:33.250Z
 f_logo:
   url: /assets/images/mima-foods-logo.jpg
 f_address: Hall 5A - T227
-f_exhibitor-url: www.mimafoods.net
+f_exhibitor-url: https://www.mimafoods.net
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:06:33.270Z

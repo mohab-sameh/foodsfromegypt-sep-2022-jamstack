@@ -2,7 +2,7 @@
 created-on: 2022-10-04T21:35:57.644Z
 f_logo:
   url: /assets/images/sushine.jpg
-f_exhibitor-url: "www.mansour-int.com "
+f_exhibitor-url: "https://www.mansour-int.com "
 layout: "[exhibitors].html"
 slug: sunshine
 title: Sunshine

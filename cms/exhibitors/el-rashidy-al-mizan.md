@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:50.350Z
 f_logo:
   url: /assets/images/el-rashidi-el-mizan-logo.jpg
-f_exhibitor-url: www.elrashidielmizan.net
+f_exhibitor-url: https://www.elrashidielmizan.net
 layout: "[exhibitors].html"
 slug: el-rashidy-al-mizan
 title: El Rashidy AL Mizan

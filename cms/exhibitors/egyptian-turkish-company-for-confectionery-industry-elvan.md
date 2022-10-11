@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:50.046Z
 f_logo:
   url: /assets/images/egyptian-turkish-company-for-confectionery-industry-elvan.jpg
-f_exhibitor-url: www.elvanegypt.com
+f_exhibitor-url: https://www.elvanegypt.com
 layout: "[exhibitors].html"
 slug: egyptian-turkish-company-for-confectionery-industry-elvan
 title: Egyptian Turkish company for confectionery industry Elvan

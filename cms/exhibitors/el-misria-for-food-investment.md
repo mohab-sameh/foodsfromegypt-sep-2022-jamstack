@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:50.836Z
 f_logo:
   url: /assets/images/el-misria-for-food-investment.jpg
-f_exhibitor-url: www.elmasria.org
+f_exhibitor-url: https://www.elmasria.org
 layout: "[exhibitors].html"
 slug: el-misria-for-food-investment
 title: El Misria For Food Investment

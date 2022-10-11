@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:48.948Z
 f_logo:
   url: /assets/images/atlantis-international.jpg
-f_exhibitor-url: www.atlantis-eg.com
+f_exhibitor-url: https://www.atlantis-eg.com
 layout: "[exhibitors].html"
 slug: atlantis-international
 title: Atlantis International

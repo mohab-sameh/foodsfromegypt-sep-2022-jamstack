@@ -6,7 +6,7 @@ published-on: 2022-10-04T22:57:10.032Z
 f_logo:
   url: /assets/images/al-waha-logo.jpg
 f_address: Hall 8 - G91
-f_exhibitor-url: www.elwahaegypt.com
+f_exhibitor-url: https://www.elwahaegypt.com
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T22:57:10.046Z

@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:49.547Z
 f_logo:
   url: /assets/images/dream-valley.png
-f_exhibitor-url: www.dreamvalleyfoods.com
+f_exhibitor-url: https://www.dreamvalleyfoods.com
 layout: "[exhibitors].html"
 slug: dream-valley-foods-for-food-industrial
 title: Dream Valley Foods for food industrial

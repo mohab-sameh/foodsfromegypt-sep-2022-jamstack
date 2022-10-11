@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:48.291Z
 f_logo:
   url: /assets/images/al-sakr-logo-p-1600.jpeg
-f_exhibitor-url: www.sakrgroup.net
+f_exhibitor-url: https://www.sakrgroup.net
 layout: "[exhibitors].html"
 slug: al-sakr-for-food-industries
 title: Al Sakr for food industries

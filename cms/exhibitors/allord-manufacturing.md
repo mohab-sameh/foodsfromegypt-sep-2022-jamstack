@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:48.658Z
 f_logo:
   url: /assets/images/allord-manufacturing.png
-f_exhibitor-url: www.allordco.com
+f_exhibitor-url: https://www.allordco.com
 layout: "[exhibitors].html"
 slug: allord-manufacturing
 title: Allord Manufacturing

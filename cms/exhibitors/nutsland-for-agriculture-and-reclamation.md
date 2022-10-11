@@ -6,7 +6,7 @@ published-on: 2022-10-04T23:07:43.909Z
 f_logo:
   url: /assets/images/nutsland-for-agriculture-and-reclamation.jpg
 f_address: Hall 3 - A195
-f_exhibitor-url: www.nutsland.co
+f_exhibitor-url: https://www.nutsland.co
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:07:43.924Z

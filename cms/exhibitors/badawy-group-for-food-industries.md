@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:49.078Z
 f_logo:
   url: /assets/images/badawy-group-for-food-industries-.jpg
-f_exhibitor-url: www.badawygroup.net
+f_exhibitor-url: https://www.badawygroup.net
 layout: "[exhibitors].html"
 slug: badawy-group-for-food-industries
 title: Badawy Group for Food Industries

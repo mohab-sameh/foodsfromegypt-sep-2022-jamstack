@@ -6,7 +6,7 @@ published-on: 2022-10-04T23:06:00.586Z
 f_logo:
   url: /assets/images/linah-farm-logo-1.png
 f_address: Hall 8 - G146
-f_exhibitor-url: www.linahfarms.com
+f_exhibitor-url: https://www.linahfarms.com
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:06:00.595Z

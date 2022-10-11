@@ -6,7 +6,7 @@ published-on: 2022-10-04T23:08:14.556Z
 f_logo:
   url: /assets/images/paste-juice-logo.jpg
 f_address: Hall 5B - N177
-f_exhibitor-url: www.paste-juice.com
+f_exhibitor-url: https://www.paste-juice.com
 tags: exhibitors
 layout: "[exhibitors].html"
 date: 2022-10-04T23:08:14.565Z

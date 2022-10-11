@@ -2,7 +2,7 @@
 created-on: 2022-10-04T22:48:48.763Z
 f_logo:
   url: /assets/images/alamir-for-manufacturing-and-preparing-agro-products.jpg
-f_exhibitor-url: www.alamireg.com
+f_exhibitor-url: https://www.alamireg.com
 layout: "[exhibitors].html"
 slug: alamir-for-manufacturing-and-preparing-agro-products
 title: Alamir for Manufacturing and Preparing Agro Products
