@@ -11,6 +11,7 @@ f_exhibitors:
   - cms/exhibitors/al-mansour-for-trading-distribution-co.md
   - cms/exhibitors/al-sabah.md
   - cms/exhibitors/arab-french-company.md
+  - cms/exhibitors/green-meadows-for-food-industries.md
 f_category-thumbnail:
   url: /assets/images/ave-calvar-kdmki7e8ma8-unsplash.jpg
 f_number-of-exibitors-2: null
