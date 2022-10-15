@@ -36,6 +36,7 @@ f_exhibitors:
   - cms/exhibitors/el-koubasay-for-juice.md
   - cms/exhibitors/orion-food-ind.md
   - cms/exhibitors/allord-manufacturing.md
+  - cms/exhibitors/al-mansour-for-trading-distribution-co.md
 f_category-thumbnail:
   url: /assets/images/z-s-aelqhedegam-unsplash.jpg
 f_number-of-exibitors-2: null
