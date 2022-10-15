@@ -25,6 +25,7 @@ f_exhibitors:
   - cms/exhibitors/harvest.md
   - cms/exhibitors/allord-manufacturing.md
   - cms/exhibitors/upper-egypt-1.md
+  - cms/exhibitors/green-meadows-for-food-industries.md
 f_category-thumbnail:
   url: /assets/images/muhammad-syafi-al-adam-qbzbygdgxgu-unsplash.jpg
 f_number-of-exibitors-2: null
